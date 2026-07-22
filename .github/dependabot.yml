@@ -7,4 +7,5 @@ updates:
       interval: "cron"
       cronjob: "0,30 * * * *"
     allow:
-      update-types: "version-update:semver-minor"
+      update-types:
+        - "version-update:semver-minor"
