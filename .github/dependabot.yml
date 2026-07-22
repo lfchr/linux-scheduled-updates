@@ -5,6 +5,6 @@ base-image:
     directory: "/"
     schedule:
       interval: "cron"
-      cronjob: "30 * * * *"
+      cronjob: "0,30 * * * *"
     allow:
       update-types: "version-update:semver-minor"
