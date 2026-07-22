@@ -7,4 +7,5 @@ updates:
       interval: "daily"
     allow:
       - update-types:
+          - "version-update:semver-patch"
           - "version-update:semver-minor"
