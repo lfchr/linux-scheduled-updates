@@ -5,6 +5,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    allow:
+    ignore:
       - update-types:
-          - "version-update:semver-minor"
+          - "version-update:semver-major"
