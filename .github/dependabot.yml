@@ -1,6 +1,10 @@
 version: 2
-updates:
+
+base-image:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "cron"
+      cronjob: "30 * * * *"
+    allow:
+      update-types: "version-update:semver-minor"
