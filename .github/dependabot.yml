@@ -5,7 +5,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    allow:
-      - update-types:
-          - "version-update:semver-patch"
-          - "version-update:semver-minor"
+    ignore:
+      - dependency-name: "fedora*"
+        versions: ["> 44"]
