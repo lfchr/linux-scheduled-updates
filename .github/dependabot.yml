@@ -1,6 +1,6 @@
 version: 2
 
-base-image:
+updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
