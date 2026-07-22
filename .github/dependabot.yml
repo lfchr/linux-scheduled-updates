@@ -4,8 +4,7 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "cron"
-      cronjob: "0,30 * * * *"
+      interval: "daily"
     allow:
       - update-types:
           - "version-update:semver-minor"
