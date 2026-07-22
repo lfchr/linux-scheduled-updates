@@ -1,0 +1,13 @@
+name: build latest
+
+on:
+  push
+
+jobs:
+  build-push:
+    uses: lfchr/linux/.github/workflows/build-push-ghcr.yml@main
+    with:
+      image-tag: latest
+      ghcr-user: ${{ github.actor }}
+    secrets:
+      ghcr_token: ${{ secrets.GITHUB_TOKEN }}
