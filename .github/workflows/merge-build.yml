@@ -1,4 +1,4 @@
-name: auto-merge dependabot pr
+name: merge dependabot pr and build image
 
 on: pull_request_target
 
@@ -13,3 +13,11 @@ jobs:
         run: gh pr merge -m "${{github.event.pull_request.html_url}}"
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  build:
+    uses: lfchr/linux/.github/workflows/build-push-ghcr.yml@main
+    if: ${{ jobs.merge.if == 'success' }}
+    with:
+      image-tag: latest
+      ghcr-user: ${{ github.actor }}
+    secrets:
+      ghcr_token: ${{ secrets.GITHUB_TOKEN }}
