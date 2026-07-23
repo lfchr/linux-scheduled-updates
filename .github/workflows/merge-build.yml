@@ -4,7 +4,7 @@ on: pull_request_target
 
 jobs:
   merge:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     if: github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == 'lfchr/linux-scheduled-updates'
     steps:
       - name: dependabot
