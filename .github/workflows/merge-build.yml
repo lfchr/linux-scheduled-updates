@@ -15,7 +15,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
   build:
     uses: lfchr/linux/.github/workflows/build-push-ghcr.yml@main
-    if: ${{ jobs.merge.if == 'success' }}
+    needs: [merge]
     with:
       image-tag: latest
       ghcr-user: ${{ github.actor }}
