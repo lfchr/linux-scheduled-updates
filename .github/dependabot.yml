@@ -5,6 +5,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 1
+      include:
+        - "fedora/fedora-bootc"
     ignore:
       - dependency-name: "fedora/fedora-bootc"
         versions: [">= 45"]
