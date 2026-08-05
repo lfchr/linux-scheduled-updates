@@ -4,9 +4,10 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "cron"
+      cronjob: "* * * * 2,5"
     cooldown:
-      default-days: 2
+      default-days: 0
       include:
         - "fedora/fedora-bootc"
     ignore:
