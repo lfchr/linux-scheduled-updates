@@ -5,7 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: "cron"
-      cronjob: "* * * * 2,5"
+      cronjob: "23 9 * * 2,5"
     cooldown:
       default-days: 0
       include:
