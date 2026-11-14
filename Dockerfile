@@ -1,3 +1,3 @@
-FROM quay.io/fedora/fedora-bootc:44@sha256:3f4b21855f45581d8c82cd44931c2a06e8a13e93d871f0c70fc387fad7e89e01
+FROM quay.io/fedora/fedora-bootc:44@sha256:5a3472162ba7781a01d249b9a56bc5a9b9fa01c08edae1f73c77dfa1e504e868
 CMD ["date --iso-8601=seconds"]
 
